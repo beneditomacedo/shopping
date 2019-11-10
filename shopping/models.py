@@ -17,7 +17,7 @@ class Order(models.Model):
     url = models.CharField(max_length=255)
 
     def __str__(self):
-        return self.number
+        return self.key
 
 class Item(models.Model):
     order = models.ForeignKey(Order,on_delete=models.CASCADE)
