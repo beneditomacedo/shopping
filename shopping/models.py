@@ -8,10 +8,11 @@ class Retail(models.Model):
 
 class Store(models.Model):
     retail = models.ForeignKey(Retail,on_delete=models.CASCADE)
+    cnpj = models.CharField(max_length=14)
     address = models.CharField(max_length=255)
 
     def __str__(self):
-        return self.address
+        return self.cnpj
 
 class Order(models.Model):
     date = models.DateField()
