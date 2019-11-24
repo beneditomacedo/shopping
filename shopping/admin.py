@@ -1,11 +1,11 @@
 from django.contrib import admin
 
-from .models import Retail, Store, Order, Item
+from .models import Retailer, Store, Order, Item
 
 class StoreInLine(admin.TabularInline):
     model = Store
 
-class RetailAdmin(admin.ModelAdmin):
+class RetailerAdmin(admin.ModelAdmin):
     inlines = [
         StoreInLine,
     ]
@@ -18,5 +18,5 @@ class OrderAdmin(admin.ModelAdmin):
         ItemInLine
     ]
 
-admin.site.register(Retail,RetailAdmin)
+admin.site.register(Retailer,RetailerAdmin)
 admin.site.register(Order,OrderAdmin)

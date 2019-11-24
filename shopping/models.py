@@ -1,13 +1,13 @@
 from django.db import models
 
-class Retail(models.Model):
+class Retailer(models.Model):
     name = models.CharField(max_length=255)
 
     def __str__(self):
         return self.name
 
 class Store(models.Model):
-    retail = models.ForeignKey(Retail,on_delete=models.CASCADE)
+    retail = models.ForeignKey(Retailer,on_delete=models.CASCADE)
     cnpj = models.CharField(max_length=14)
     address = models.CharField(max_length=255)
 
