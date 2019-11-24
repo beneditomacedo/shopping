@@ -9,6 +9,7 @@ pylint = "*"
 [packages]
 django = "*"
 pycpfcnpj = "*"
+djangorestframework = "*"
 
 [requires]
 python_version = "3.7"
