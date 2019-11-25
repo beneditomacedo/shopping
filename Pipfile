@@ -10,6 +10,7 @@ pylint = "*"
 django = "*"
 pycpfcnpj = "*"
 djangorestframework = "*"
+pylint-django = "*"
 
 [requires]
 python_version = "3.7"
